@@ -1,110 +1,53 @@
 
 const Categories =[
     {
-        "name":"sport"
+        "name":"MacRumors"
     },
     {
-        "name":"culture"
+        "name":"The Guardian"
     },
     {
-        "name":"technologies"
+        "name":"Android Central"
     },
     {
-        "name":"sciences"
+        "name":"Ars Technica"
     },
     {
-        "name":"developpement"
+        "name":"The Verge"
     },
     {
-        "name":"testing"
+        "name":"Wired"
     },
     {
-        "name":"latest"
+        "name":"CNET"
     },
     {
-        "name":"anime"
+        "name":"Harvard Business Review"
     },
     {
-        "name":"movies"
+        "name":"Business Insider"
     },
     {
-        "name":"feminisme"
+        "name":"Xataka.com"
     },
     {
-        "name":"Q&A"
+        "name":"Polygon"
     },
     {
-        "name":"test2"
+        "name":"Google News"
     },
     {
-        "name":"test3"
+        "name":"Fox News"
     },
     {
-        "name":"test4"
+        "name":"9to5Mac"
     },
     {
-        "name":"anime"
+        "name":"Digital Trends"
     },
     {
-        "name":"movies"
-    },
-    {
-        "name":"feminisme"
-    },
-    {
-        "name":"Q&A"
-    },
-    {
-        "name":"test2"
-    },
-    {
-        "name":"test3"
-    },
-    {
-        "name":"test4"
-    },
-    {
-        "name":"anime"
-    },
-    {
-        "name":"movies"
-    },
-    {
-        "name":"feminisme"
-    },
-    {
-        "name":"Q&A"
-    },
-    {
-        "name":"test2"
-    },
-    {
-        "name":"test3"
-    },
-    {
-        "name":"test4"
-    },
-    {
-        "name":"anime"
-    },
-    {
-        "name":"movies"
-    },
-    {
-        "name":"feminisme"
-    },
-    {
-        "name":"Q&A"
-    },
-    {
-        "name":"test2"
-    },
-    {
-        "name":"test3"
-    },
-    {
-        "name":"test4"
-    },
+        "name":"Engadget"
+    }
 ]
 
 export default {Categories}

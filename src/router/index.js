@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LayoutView from '../views/PagesLayout.vue'
 import LandingPage from '../views/LandingPage.vue'
-import SideBar from '../components/SideBar.vue'
+import NewsDisplayer from '../components/NewsDisplayer.vue'
 
 
 Vue.use(VueRouter)
@@ -19,12 +19,12 @@ const routes = [
     component: LandingPage
   },
   {
-    path: '/test',
+    path: '/home',
     name: 'home',
     component: LayoutView,
     children:
     [
-      { path: 'add', name: 'add', component:SideBar  }
+      { path: '/', name: 'News', component:NewsDisplayer  }
     ]
   },
 ]

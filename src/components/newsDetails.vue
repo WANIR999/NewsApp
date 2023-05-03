@@ -1,10 +1,10 @@
 <template>
     <div class="bloc w-full  my-3 flex flex-col justify-around items-center rounded-xl">
-      <img src="../assets/images/logotype.png" class="w-40 h-40">
+        <Icon icon="mdi:user-circle-outline" color="#d3d6db" class="w-40 h-40"/>
+        <h1 class="text-white text-xl">{{ author}}</h1>
       <div class="w-full h-1/2 flex items-center">
-       <p class="text-center text-xl px-2 ">
-        This app brings you all the must-read articles from your favorite sources on the topics that matter most to you.
-        To personalize the news, you can choose the posts you want to see and the topics you're interested in, such as Entertainment, Food, and Science.
+       <p class="text-center text-base px-2 ">
+       {{ description }}
        </p>
       </div>
       <div class="w-full flex justify-around items-center py-2">
@@ -19,8 +19,17 @@
 import { Icon } from '@iconify/vue2';
 
 export default {
-name: 'SiteInfo',
+name: 'NewsDetails',
 props: {
+  item:Object
+},
+computed:{
+    description(){
+        return 'Description : '+this.item.description
+    },
+    author(){
+        return 'Author : '+this.item.author
+    }
 },
 components:
 {
