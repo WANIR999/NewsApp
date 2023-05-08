@@ -1,10 +1,10 @@
 <template>
-    <div class=" w-full h-full rounded-xl imgzone" v-bind:style="`backgroundImage: url(${image}` ">
+    <div class=" w-full h-full rounded-xl imgzone" v-bind:style="`backgroundImage: url(${image})` ">
             <div class="w-full h-full containr relative flex flex-col justify-end ">
                 <div @click="getBack" class="w-12 h-12 rounded-full mx-2 my-2 flex justify-center items-center back absolute top-0 left-0 cursor-pointer">
                     <Icon icon="material-symbols:arrow-back" color="black" width="20" />
                 </div>
-                <div class=" cursor-pointer w-12 h-12 rounded-full mx-2 my-2 flex justify-center items-center back absolute top-0 right-0">
+                <div @click="heartClick" class=" cursor-pointer w-12 h-12 rounded-full mx-2 my-2 flex justify-center items-center back absolute top-0 right-0">
                     <Icon icon="mdi:cards-heart-outline" class="fav" width="30" />
                 </div>
                
@@ -34,6 +34,10 @@ methods:{
    
     getBack(){
         this.$emit('setmode','all',{})
+        // console.log(this.image)
+    },
+    heartClick(){
+        this.$emit('addFav')
     }
 },
 components:{

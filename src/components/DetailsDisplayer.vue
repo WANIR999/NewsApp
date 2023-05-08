@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-full rounded-xl">
-        <ImageZone :image="image" :title="title" :content="content" @setmode="setmode($event)" />
+        <ImageZone :image="image" :title="title" :content="content" @addFav="addFav($event)" @setmode="setmode($event)" />
     </div>
 </template>
 
@@ -14,9 +14,12 @@ export default {
         title: String,
         content: String,
         setmode:Function,
+        setfav:Function,
     },
     methods: {
-
+       addFav(){
+         this.$emit('setfav')
+       }
     },
     components: {
         ImageZone

@@ -1,6 +1,6 @@
 <template>
     <div class="scndcontainer my-3 mx-3 rounded-xl">
-       <SiteInfo v-if="status=='all'"/>
+       <SiteInfo v-if="status!=='info'"/>
        <NewsDetails v-if="status=='info'" :item="item"/>
     </div>
 </template>
@@ -13,6 +13,7 @@ name: 'SecondSide',
 props: {
     status:String,
     item:Object,
+
 },
 components:{
     SiteInfo,NewsDetails
@@ -24,6 +25,11 @@ components:{
 .scndcontainer{
     width: 300px;
     height: 820px;
+    background-color:#233142;
+}
+.search{
+    width: 300px;
+    height: 40px;
     background-color:#233142;
 }
 

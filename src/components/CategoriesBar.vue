@@ -1,9 +1,10 @@
 <template>
-    <div class="mx-auto h-14 catbar flex items-center shadow-slate-600 my-1 rounded-xl overflow-x-scroll scroll cursor-pointer">
-       <div v-for="item in categories" :key="item.name" @click="setCate(item.name)" class="tag text-xs text-center flex items-center mx-2 rounded-xl hover:text-white">
-       {{item.name}}
-       </div>
-    </div>
+        <div class="mx-auto h-14 catbar flex items-center shadow-slate-600 my-1 rounded-xl overflow-x-scroll scroll cursor-pointer" >
+          <div v-for="item in categories" :key="item.name" @click="setCate(item.name)" class="tag text-xs text-center flex items-center mx-2 rounded-xl hover:text-white" :class="item.name==cat ? 'text-white':'' ">
+          {{item.name}}
+          </div>
+        </div>
+
 </template>
 
 
