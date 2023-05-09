@@ -63,18 +63,17 @@ export default {
         },
         setfav() {
             this.item.id=this.$store.state.id
-            this.$store.commit('addFav',this.item)
-            this.$store.commit('incId')
+            this.$store.dispatch('addFav',this.item)
+            this.$store.dispatch('increment')
             window.localStorage.setItem('favorites',JSON.stringify(this.$store.state.favorites))
             window.localStorage.setItem('id',this.$store.state.id)
-            console.log((this.$store.state.favorites))
-            console.log(this.$store.state.favorites)
+            console.log(this.$store.state.id)
         },
     },
     mounted() {
         this.setNews(),
-        this.$store.commit('defineFavList',JSON.parse(window.localStorage.getItem('favorites')))
-        this.$store.commit('defineId',window.localStorage.getItem('id'))
+        this.$store.dispatch('defineFavList',JSON.parse(window.localStorage.getItem('favorites')))
+        this.$store.dispatch('defineId',window.localStorage.getItem('id'))
     },
     watch:{
     
