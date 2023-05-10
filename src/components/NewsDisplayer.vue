@@ -13,7 +13,7 @@
             <NewCard @setitem="setitem($event)" v-for="item in filtredData" :key="item.url" :title="item.title" :description="item.description"
              :author="item.author" :image="item.urlToImage" :date="setToLocalDate(item.publishedAt)" :content="item.content" />
         </div>
-        <DetailsDisplayer v-if="mode == 'info'" 
+        <DetailsDisplayer v-if="mode== 'info' && fav==false" 
         :title="item.title" :image="item.image" @setfav="setfav($event)" :content="item.content" :setmode="setmode" />
     </div>
 </template>
